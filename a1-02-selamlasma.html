@@ -30,8 +30,7 @@
     <section class="unit-intro">
         <h2>Bu derste ne öğreneceğiz?</h2>
         <p>
-            Bu derste İtalyanca selamlaşmayı, birine nasıl olduğunu
-            sormayı ve vedalaşmayı öğreneceğiz.
+            Bu derste İtalyanca selamlaşmayı ve vedalaşmayı öğreneceğiz.
         </p>
 
         <ul>
@@ -176,7 +175,7 @@
                     <td>Gelecek hafta görüşeceğimizde</td>
                 </tr>
                 <tr>
-                    <td><strong>A piu tardi!</strong></td>
+                    <td><strong>A più tardi!</strong></td>
                     <td>Sonra görüşürüz!</td>
                     <td>Sonra görüşeceğimizde</td>
                 </tr>
@@ -329,81 +328,62 @@
         </div>
     </section>
 
-    <!-- 7. ALIŞTIRMA -->
-    <section class="resource-section">
-        <h2>✏️ 7. Kendini Test Et</h2>
 
-        <p>Doğru cevabı seç ve cevaplarını kontrol et.</p>
+<!-- 7. ALIŞTIRMA -->
+<section class="resource-section">
+    <h2>✏️ 7. Kendini Test Et</h2>
 
-        <div class="note-box">
-            <p><strong>1. Sabah birine nasıl selam verirsin?</strong></p>
+    <p>Doğru cevabı seç ve cevaplarını kontrol et.</p>
 
-            <label>
-                <input type="radio" name="q1" value="a">
-                Buonanotte
-            </label>
-            <br>
+    <div class="note-box">
+        <p><strong>1. Sabah birine nasıl selam verirsin?</strong></p>
 
-            <label>
-                <input type="radio" name="q1" value="b">
-                Buongiorno
-            </label>
-            <br>
+        <label>
+            <input type="radio" name="q1" value="a">
+            Buonanotte
+        </label>
+        <br>
 
-            <label>
-                <input type="radio" name="q1" value="c">
-                Arrivederci
-            </label>
-        </div>
+        <label>
+            <input type="radio" name="q1" value="b">
+            Buongiorno
+        </label>
+        <br>
 
-        <div class="note-box">
-            <p><strong>2. “Nasılsın?” ifadesinin samimi karşılığı hangisidir?</strong></p>
+        <label>
+            <input type="radio" name="q1" value="c">
+            Arrivederci
+        </label>
+    </div>
 
-            <label>
-                <input type="radio" name="q2" value="a">
-                Come stai?
-            </label>
-            <br>
+    <div class="note-box">
+        <p><strong>2. “Yarın görüşürüz!” nasıl söylenir?</strong></p>
 
-            <label>
-                <input type="radio" name="q2" value="b">
-                A domani!
-            </label>
-            <br>
+        <label>
+            <input type="radio" name="q2" value="a">
+            A presto!
+        </label>
+        <br>
 
-            <label>
-                <input type="radio" name="q2" value="c">
-                Buonasera!
-            </label>
-        </div>
+        <label>
+            <input type="radio" name="q2" value="b">
+            A domani!
+        </label>
+        <br>
 
-        <div class="note-box">
-            <p><strong>3. “Yarın görüşürüz!” nasıl söylenir?</strong></p>
+        <label>
+            <input type="radio" name="q2" value="c">
+            Buonanotte!
+        </label>
+    </div>
 
-            <label>
-                <input type="radio" name="q3" value="a">
-                A presto!
-            </label>
-            <br>
+    <button type="button" onclick="checkAnswers()">
+        Cevaplarımı Kontrol Et
+    </button>
 
-            <label>
-                <input type="radio" name="q3" value="b">
-                A domani!
-            </label>
-            <br>
+    <p id="quiz-result" aria-live="polite"></p>
+</section>
 
-            <label>
-                <input type="radio" name="q3" value="c">
-                Buonanotte!
-            </label>
-        </div>
-
-        <button type="button" onclick="checkAnswers()">
-            Cevaplarımı Kontrol Et
-        </button>
-
-        <p id="quiz-result" aria-live="polite"></p>
-    </section>
 
     <!-- 8. DERS TAMAMLAMA -->
     <section class="complete">
@@ -437,12 +417,12 @@
     <p>A1.02 — I saluti</p>
 </footer>
 
+
 <script>
 function checkAnswers() {
     const answers = {
         q1: "b",
-        q2: "a",
-        q3: "b"
+        q2: "b"
     };
 
     let score = 0;
@@ -470,12 +450,13 @@ function checkAnswers() {
     }
 
     result.textContent =
-        "Sonucun: " + score + "/3 doğru! " +
-        (score === 3
+        "Sonucun: " + score + "/2 doğru! " +
+        (score === 2
             ? "Harika! 🎉"
             : "Tekrar deneyebilirsin. Cevaplarını gözden geçir!");
 }
 </script>
+
 
 </body>
 </html>
